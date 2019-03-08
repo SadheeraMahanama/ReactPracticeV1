@@ -9,7 +9,7 @@ const FooterPage = () => {
           <MDBCol md="6">
             <h5 className="title">Footer Content- In development</h5>
             <p>
-               Chanaka
+               SADHEEE
             </p>
           </MDBCol>
           <MDBCol md="6">
