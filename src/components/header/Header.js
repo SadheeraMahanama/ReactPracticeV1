@@ -15,9 +15,9 @@
 
 
 import React from 'react';
-import { MDBContainer, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavLink,MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBMDBNavLink, MDBIcon } from 'mdbreact';
+import { MDBContainer, MDBNavbar, MDBNavbarBrand, MDBNavbarNav,MDBBtn, MDBNavLink,MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBMDBNavLink, MDBIcon } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
-
+import { withRouter,Link,Switch } from "react-router-dom";
 class FixedNavbarExample extends React.Component {
   constructor(props) {
       super(props);
@@ -38,7 +38,8 @@ class FixedNavbarExample extends React.Component {
     const container = {height: 1300}
     return(
       <div>
-        <Router>
+        {/* <Router>
+            <Switch> */}
           <header>
             <MDBNavbar style={bgPink} dark expand="md" scrolling fixed="top">
               <MDBNavbarBrand href="/">
@@ -51,7 +52,7 @@ class FixedNavbarExample extends React.Component {
                       <MDBNavLink to="#">Home</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                      <MDBNavLink to="#">Features</MDBNavLink>
+                      <MDBNavLink to="/features">Features</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
                       <MDBNavLink to="#">Pricing</MDBNavLink>
@@ -74,16 +75,21 @@ class FixedNavbarExample extends React.Component {
               </MDBCollapse>
             </MDBNavbar>
           </header>
-        </Router>
+          {/* </Switch>
+        </Router> */}
+
         <MDBContainer style={container} className="text-center mt-5 pt-5">
           <h2>This Navbar is fixed</h2>
           <h5>It will always stay visible on the top, even when you scroll down</h5>
           <br/>
           <p>Full page intro with background image will be always displayed in full screen mode, regardless of device</p>
+          <Link to="/features">hghghghgjhg</Link>
         </MDBContainer>
+
+
       </div>
     );
   }
 }
 
-export default FixedNavbarExample;
+export default withRouter(FixedNavbarExample);
