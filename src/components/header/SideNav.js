@@ -9,8 +9,7 @@ const FooterPage = () => {
           <MDBCol md="6">
             <h5 className="title">Footer Content- In development</h5>
             <p>
-              Here you can use rows and columns here to organize your footer
-              content.
+               Chanaka
             </p>
           </MDBCol>
           <MDBCol md="6">
